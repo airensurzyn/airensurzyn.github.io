@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivera — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --tag-bg: #f3f4f6;
+      --max-w: 760px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,250,0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    section {
+      padding: 5rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 5rem 0 0;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .hero-text .title {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero-links a {
+      font-size: 0.82rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid #bfdbfe;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero-links a:hover { background: #eff6ff; }
+
+    /* ── SECTION HEADINGS ── */
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ── ABOUT ── */
+    .about-text {
+      font-size: 1.05rem;
+      color: #374151;
+      max-width: 600px;
+    }
+
+    /* ── EXPERIENCE ── */
+    .timeline { display: flex; flex-direction: column; gap: 2.5rem; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .job-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .job-company {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .job-period {
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .job-desc {
+      color: #4b5563;
+      margin-top: 0.6rem;
+      font-size: 0.92rem;
+    }
+    .job-desc ul {
+      padding-left: 1.25rem;
+      margin-top: 0.4rem;
+    }
+    .job-desc li + li { margin-top: 0.3rem; }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-group h3 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.8rem;
+      color: #374151;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      background: var(--surface);
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: #bfdbfe;
+    }
+    .project-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .project-card p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      line-height: 1.55;
+    }
+    .project-card .tags { margin-top: 0.9rem; }
+    .project-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .project-link:hover { text-decoration: underline; }
+
+    /* ── EDUCATION ── */
+    .edu-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .edu-item + .edu-item { margin-top: 1.75rem; }
+    .edu-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .edu-body h3 { font-size: 0.95rem; font-weight: 600; }
+    .edu-body .edu-school { color: var(--accent); font-size: 0.88rem; }
+    .edu-body .edu-period { color: var(--muted); font-size: 0.8rem; margin-top: 0.15rem; }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .contact-item:hover {
+      border-color: #bfdbfe;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .contact-icon { font-size: 1.2rem; }
+    .contact-label { font-size: 0.78rem; color: var(--muted); }
+    .contact-value { font-size: 0.88rem; font-weight: 500; margin-top: 0.05rem; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-top: 5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 520px) {
+      .hero { flex-direction: column; gap: 1.25rem; }
+      nav ul { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="hero" id="top">
+      <div class="avatar">👤</div>
+      <div class="hero-text">
+        <h1>Alex Rivera</h1>
+        <p class="title">Product Designer &amp; Front-End Developer</p>
+        <div class="hero-links">
+          <a href="mailto:alex@example.com">✉ Email</a>
+          <a href="https://linkedin.com/in/alexrivera" target="_blank">LinkedIn</a>
+          <a href="https://github.com/alexrivera" target="_blank">GitHub</a>
+          <a href="/alex-rivera-resume.pdf" download>↓ Resume PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <p class="section-label">About</p>
+      <p class="about-text">
+        Hi, I'm Alex — a product designer and front-end developer with 6+ years of
+        experience building thoughtful digital products. I care deeply about the
+        intersection of design and engineering: shipping things that look great
+        <em>and</em> work reliably. Currently based in San Francisco, open to
+        remote opportunities worldwide.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <p class="section-label">Work Experience</p>
+      <div class="timeline">
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Senior Product Designer</span>
+              <span> · </span>
+              <span class="job-company">Acme Corp</span>
+            </div>
+            <span class="job-period">Jan 2023 – Present</span>
+          </div>
+          <div class="job-desc">
+            <ul>
+              <li>Led end-to-end design of a mobile onboarding flow, increasing activation by 22%.</li>
+              <li>Established a company-wide design system used across 4 product lines.</li>
+              <li>Collaborated with engineering to ship pixel-perfect components in React.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">UX / Front-End Engineer</span>
+              <span> · </span>
+              <span class="job-company">Bright Studio</span>
+            </div>
+            <span class="job-period">Jun 2020 – Dec 2022</span>
+          </div>
+          <div class="job-desc">
+            <ul>
+              <li>Designed and developed client-facing web applications for 8 startups.</li>
+              <li>Reduced average page load time by 40% through performance audits and lazy-loading.</li>
+              <li>Mentored two junior designers, running weekly critique sessions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <span class="job-title">Front-End Developer</span>
+              <span> · </span>
+              <span class="job-company">Nexus Labs</span>
+            </div>
+            <span class="job-period">Aug 2018 – May 2020</span>
+          </div>
+          <div class="job-desc">
+            <ul>
+              <li>Built and maintained marketing sites and landing pages using HTML, CSS, and Vue.js.</li>
+              <li>Integrated REST APIs and third-party analytics tools.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="section-label">Skills</p>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Design</h3>
+          <div class="tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">User Research</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Front-End</h3>
+          <div class="tags">
+            <span class="tag">HTML &amp; CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span class="tag">Git</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Storybook</span>
+            <span class="tag">Notion</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Soft Skills</h3>
+          <div class="tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Mentorship</span>
+            <span class="tag">Agile / Scrum</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section-label">Projects</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>OpenShelf</h3>
+          <p>A community-driven book discovery app with personalized reading lists and social reviews. Built solo as a weekend project.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">CSS</span>
+          </div>
+          <a class="project-link" href="https://github.com/alexrivera/openshelf" target="_blank">→ View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Palette CLI</h3>
+          <p>A command-line tool that generates accessible color palettes from a seed color, with WCAG contrast checking built in.</p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <a class="project-link" href="https://github.com/alexrivera/palette-cli" target="_blank">→ View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3>DesignLog</h3>
+          <p>A minimal journaling tool for designers to capture daily process notes, sketches, and decisions. 300+ active users.</p>
+          <div class="tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Figma</span>
+          </div>
+          <a class="project-link" href="https://designlog.app" target="_blank">→ Visit site</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <p class="section-label">Education</p>
+
+      <div class="edu-item">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-body">
+          <h3>B.S. Computer Science &amp; Design</h3>
+          <p class="edu-school">University of California, Berkeley</p>
+          <p class="edu-period">2014 – 2018</p>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-icon">📜</div>
+        <div class="edu-body">
+          <h3>Google UX Design Certificate</h3>
+          <p class="edu-school">Coursera / Google</p>
+          <p class="edu-period">2021</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:alex@example.com">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">alex@example.com</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/alexrivera" target="_blank">
+          <span class="contact-icon">💼</span>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">alexrivera</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://github.com/alexrivera" target="_blank">
+          <span class="contact-icon">🐙</span>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">@alexrivera</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://twitter.com/alexrivera" target="_blank">
+          <span class="contact-icon">🐦</span>
+          <div>
+            <div class="contact-label">Twitter / X</div>
+            <div class="contact-value">@alexrivera</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Rivera · Built with HTML &amp; CSS</p>
+  </footer>
+
+</body>
+</html>
