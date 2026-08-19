@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artificial Intelligence Proliferation Frameworks Under the Biden and Trump Administrations — Airen Surzyn</title>
+  <meta name="description" content="A research paper by Airen Surzyn comparing the Biden Administration's AI Diffusion Rule and the second Trump Administration's market-driven AI export strategy." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --tag-bg: #f3f4f6;
+      --max-w: 760px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,250,250,0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+    }
+    nav a.back-link {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    nav a.back-link:hover { color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header { margin-bottom: 3rem; }
+    .article-header h1 {
+      font-size: 1.85rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .article-meta {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .article-meta .meta-row + .meta-row { margin-top: 0.25rem; }
+    .article-meta .accent { color: var(--accent); font-weight: 500; }
+
+    /* ── ARTICLE BODY ── */
+    article h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    article h3 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-top: 2.25rem;
+      margin-bottom: 0.9rem;
+    }
+    article h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
+    }
+    article > h2:first-of-type { margin-top: 0; }
+
+    article p {
+      color: #374151;
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    article sup a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.7em;
+    }
+    article sup a:hover { text-decoration: underline; }
+
+    /* ── FOOTNOTES ── */
+    .footnotes {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .footnotes h2 {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .footnotes ol {
+      list-style: none;
+      counter-reset: fn;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .footnotes li {
+      counter-increment: fn;
+      font-size: 0.82rem;
+      color: #4b5563;
+      line-height: 1.6;
+      padding-left: 1.75rem;
+      position: relative;
+    }
+    .footnotes li::before {
+      content: counter(fn) ".";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+    .footnotes li a { color: var(--accent); word-break: break-word; }
+    .footnotes li a.backref { margin-left: 0.35rem; text-decoration: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 520px) {
+      .article-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="back-link" href="index.html#writing">← Back to Airen Surzyn</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="article-header">
+      <h1>Artificial Intelligence Proliferation Frameworks Under the Biden and Trump Administrations</h1>
+      <div class="article-meta">
+        <div class="meta-row"><span class="accent">Airen Surzyn</span></div>
+        <div class="meta-row">Evolution of Cyberpolicy · Professor Jeanette Manfra</div>
+        <div class="meta-row">December 15, 2025</div>
+      </div>
+    </div>
+
+    <article>
+
+      <h2>Introduction</h2>
+      <p>Artificial intelligence has the potential to define the next era of technological and industrial progress. Leading the world in the development and governance of artificial intelligence is therefore a strategic priority of the United States government. A key element of maintaining its current advantage over competitors like the People's Republic of China is promoting the international adoption of U.S-origin artificial intelligence technologies such as microchips, cloud services, and foundational models. Proliferating these resources globally while avoiding technological leakage, however, requires the United States government to exert control over where and to whom these technologies can be distributed. While the Biden Administration favored a risk-based framework that emphasized control, governance, and a cautious proliferation strategy, the second Trump Administration has adopted a market-driven approach, preferring to reduce regulation and increase distribution. While this strategy has led to a flurry of private sector deals with core allies like South Korea and Germany, complex partnerships with strategically ambiguous countries in the Gulf have necessitated that the United States government plays an active role in setting the terms of the agreements. However, the ad-hoc nature of these deals and their high strategic risk demonstrates the need for the administration to incorporate better assurance and enforcement mechanisms into its AI doctrine. By creating policies that set clear expectations for technology security and terms that enforce compliance, the second Trump Administration can expand its bilateral dealmaking capacity and therefore advance its objective of proliferating American AI technology around the globe.</p>
+
+      <h2>From Export Controls to AI Proliferation Frameworks</h2>
+      <p>The development of artificial intelligence into a national security concern has forced the United States government to exert control over its distribution. Beginning in 2018, the United States began placing export controls on the sale of microchips to Chinese companies in an effort to maintain its technological advantage in the development of advanced computing capabilities. As competition has increased, however, these restrictions have expanded beyond simple export controls into broader policy frameworks that represent how the United States is attempting to manage the global flow of these technologies. The Biden Administration and second Trump Administration have approached this problem with different philosophies, which are outlined principally in the Biden Administration's <em>Framework for Artificial Intelligence Diffusion</em> and the second Trump Administration's <em>America's AI Action Plan</em>/<em>Executive Order Promoting the Export of the American AI Technology Stack</em>. Examining these strategies and how they evolved is informative for understanding how the United States intends to compete with China over the international proliferation of AI technologies in the near future.</p>
+
+      <h3>Basic Export Controls</h3>
+      <p>Export controls became an important tool of the United States government to regulate the proliferation of dangerous technology and products during the Cold War. Historically, export controls were used primarily to achieve economic objectives rather than foreign policy or national security goals<sup><a id="fnref1" href="#fn1">1</a></sup>. However, as the United States began pursuing a policy of Soviet "containment", Congress passed the Export Controls Act of 1949 which introduced the strategic dimension of technology exports<sup><a id="fnref2" href="#fn2">2</a></sup>. This idea persisted throughout the Cold War, but often came into conflict with the business interests of private American companies. This remains a tension today - how does the United States effectively regulate technologies that require foreign policy and national security considerations while allowing American companies to stay competitive in global markets?</p>
+      <p>Artificial Intelligence and its computing infrastructure came under the focus of export controls with the Export Control Reform Act of 2018. The act identifies artificial intelligence, microprocessors, and advanced computing technology among other "emerging and foundational technologies" that would be regulated by Export Administration Regulations (EARs) created by the Bureau of Industry and Security (BIS), an agency under the Department of Commerce. The ECRA also gives the President greater authority over national security and foreign policy objectives through the control of "the export, reexport, and in-country transfer of items<sup><a id="fnref3" href="#fn3">3</a></sup>". The reformed export controls were subsequently exercised in 2018 and 2019 to create targeted restrictions on semiconductor sales to Chinese tech giants, ZTE and Huawei. In 2022, the Biden Administration imposed a comprehensive set of restrictions on advanced computing integrated circuits (ICs) and semiconductor manufacturing materials<sup><a id="fnref4" href="#fn4">4</a></sup> onto an expanded list of Chinese companies citing the national security threat posed by an unregulated flow of advanced computing chips into the PRC.</p>
+      <p>This period marked the beginning of U.S. government intervention in the global flow of technologies that underpin the development of artificial intelligence. At the time, these measures were developed as export controls focused on a small set of countries (typically China) with a limited objective scope - to prevent the target country from using U.S-origin technology directly in military applications or in the development of technology that might compete with the United States and threaten its national security or foreign policy objectives. The Biden Administration evolved these objectives into the <em>Framework for Artificial Intelligence Diffusion</em> which broadened the scope of proliferation policy into a framework for managing the global flow of AI-related technologies.</p>
+
+      <h3>Biden Administration: The AI Diffusion Rule</h3>
+      <p>The <em>Framework for Artificial Intelligence Diffusion</em>, also known as the "AI Diffusion Rule", was published on January 15, 2025 by the United States Bureau of Industry and Security. The AI Diffusion Rule was significant because it marked a departure from simple export controls to a global strategy for managing the proliferation of American artificial intelligence technologies. The new framework introduced three principle concepts to guide this strategy: the creation of a three-tiered system in which countries were given access to U.S. technology according to their tier; limits on the amount and concentration of compute capabilities that private companies and allies could offshore; and the addition of model weights as a consideration of export restriction.</p>
+      <p>The most ambitious concept introduced by the AI Diffusion Rule was the creation of a three-tiered system that dictated access to U.S. emerging technology exports according to a foreign country's relationship with the United States. Tier 1 consisted of 18 countries who represented strong allyship with the United States. These countries faced no restrictions or minimal restrictions when importing advanced computing capabilities from the United States. Tier 3 was composed of China and a set of countries whose acquisition of frontier models or advanced semiconductors would pose a threat to American national security or foreign policy. This designation was premised on the threat of the specific countries leveraging the technology towards direct harm of the United States or the suspicion that the countries could not be trusted to prevent the transfer of the technology to another Tier 3 country. Tier 2 countries, who faced a standard set of import restrictions, consisted of all countries outside of Tier 1 and Tier 3. Importantly, Tier 2 countries were able to upgrade their access to United States compute resources by fulfilling a set of National Validated End User (NVEU) authorization requirements. The nature of these requirements would have not only required government-to-government agreements between the United States and the partner country, but also encouraged the countries to cut supply chain dependencies with China. In effect, these rules would force countries to choose between the United States and China to fulfill their artificial intelligence capabilities.</p>
+      <p>The AI Diffusion Rule also introduced "indirect" export restrictions that governed how artificial intelligence technology was allowed to spread between countries outside of the U.S. Specifically, while Tier 1 countries had unlimited ability to deploy computing power within their borders and those of other Tier 1 countries, they were only allowed to offshore a maximum of 25% of their total computing ability to a Tier 2 country<sup><a id="fnref5" href="#fn5">5</a></sup>. With these restrictions, the framework attempted to manage the leak of computing resources from Tier 1 countries to China or other Tier 3 countries through offshoring projects based in Tier 2 countries. In addition, the rule states that U.S-based companies would be required to keep at least 50% of their total AI computing resources in the United States, 75% in Tier 1 countries, and no more than 7% in a single Tier 2 country<sup><a id="fnref6" href="#fn6">6</a></sup>. This reflects the intention of the United States to manage not only the flow of artificial intelligence technology exiting the United States, but also the ability to control the flow between countries.</p>
+      <p>The new framework, significantly, also included the addition of model weights to export controls. This represented an expansion of technology transfer restrictions beyond physical hardware to include a sensitive and valuable portion of the AI stack. The evolution of artificial intelligence over the last decade has made microchips just one resource (albeit a very valuable one) in an ecosystem of competing priorities. This demonstrated the administration's recognition that the field was evolving and that policy needed to be updated in order to meet these changing demands.</p>
+
+      <h4>Interpreting the AI Diffusion Rule</h4>
+      <p>The AI Diffusion Rule is best viewed within the context of the Biden Administration's broader "Small Yard, High Fence" strategy first espoused by National Security Advisor, Jake Sullivan in 2023<sup><a id="fnref7" href="#fn7">7</a></sup>. In the Small Yard, High Fence strategy, the United States would exert tight control (high fence) over a small set of essential technology resources (small yard) to create bottlenecks in China's development cycle for technologies that posed risks to American national security or foreign policy objectives. To that end, the AI Diffusion Rule asserts a risk-based framework that attempts to limit the spread of artificial intelligence technologies not only directly from the United States but also between countries.</p>
+      <p>The AI Diffusion Rule approaches the Chinese AI threat from three vectors. First, it limits the supply of American technology to China through expanded restriction of direct imports as well as a new system of managing indirect exports and technology leakage from allies. The Diffusion Rule limits the ability of China to directly leverage U.S. technology for military and research purposes. Second, the tiered system of import access divides the world into AI blocs with the United States at the center. Specifically, it sets conditional access to computing power for Tier 2 countries based on severing technological supply chains with China. This was an offensive strategy by the administration to draw hard lines around alliances in a new world of AI blocs. Third, the expansion of export restrictions beyond microchips to other parts of the AI stack attempted to expand the means through which American policy can hinder China's development cycles.</p>
+
+      <h4>Criticism</h4>
+      <p>The <em>Framework for Artificial Intelligence Diffusion</em> was published days before the end of the Biden Administration and has been criticized as a hasty and incomplete attempt to regulate a critical emerging industry. While the document proposed an ambitious new framework for managing global technology flows, it presented economic, diplomatic and strategic challenges.</p>
+      <p>Economically, the new rules explicitly denied the sale of cutting edge hardware and software to a vast majority of countries, many of whom have rapidly expanding data center industries. In effect, the United States would be creating an artificial scarcity of compute power across the globe, hoping to situate itself as the gatekeeper<sup><a id="fnref8" href="#fn8">8</a></sup>. From the perspective of American technology companies, this would necessarily reduce their sales and challenge their ability to remain globally competitive. Semiconductor Industry Association President and CEO John Neuffer lamented that the new policies had been "rushed out the door days before a presidential transition and without any meaningful input from industry<sup><a id="fnref9" href="#fn9">9</a></sup>".</p>
+      <p>Strategically, the regulations threatened to undermine rather than promote the global dominance of American AI technologies. If the U.S. created a global scarcity of computing power, there was the risk that China or other competitors would fill the vacuum, creating institutional lock-in of non-American technologies. The proliferation of Chinese artificial intelligence infrastructure would then allow China to set the governance standards for artificial intelligence platforms worldwide, thus supplanting U.S. dominance. NVIDIA, a leading U.S. microchip manufacturer, released a statement shortly after the release of the Diffusion Rule calling it "misguided" and a threat to "America's hard-won technological advantage<sup><a id="fnref10" href="#fn10">10</a></sup>."</p>
+      <p>From a foreign policy perspective, the new regulations had the potential to alienate key allies who were not given Tier 1 designation, particularly NATO allies. A joint statement from the Executive Vice-President of the European Commission for Technological Sovereignty, Security, and Democracy, Henna Virkkunen, and European Commissioner for Trade and Economic Security, Maroš Šefčovič expressed concern at the new Diffusion Rule and the belief that it would be "in the US economic and security interest that the EU buys advanced AI chips from the US without limitations<sup><a id="fnref11" href="#fn11">11</a></sup>". In effect, the technological advancement of Tier 2 countries was being intentionally stifled by the United States. Further, the document did not outline a path for Tier 2 countries to advance into Tier 1, leaving them in an indefinite state of repression.</p>
+      <p>Ultimately, the AI Diffusion Rule was rescinded by the Trump Administration on May 13, 2025, a few days before it was enforced. The extreme nature of the tiering system coupled with the obstruction of market forces attracted much criticism, particularly from the private sector. The framework, however, recognized the need for American AI proliferation policy to evolve beyond simple export controls and the strategic risk posed by an over-zealous distribution of America's most valuable technological capabilities. The Biden policy was focused on limiting risk and slowing the proliferation of AI technologies. The Trump Administration would pursue a different tact.</p>
+
+      <h3>The Second Trump Administration: Market-driven Proliferation</h3>
+      <p>The Trump Administration's position on the development of American AI capabilities has been clear from the start of its second term - outcompete the rest of the world through a reduction of barriers for private industry and leverage the government to drive AI adoption domestically and abroad. David Sacks, the White House Special Advisor for AI and Crypto stated this clearly at the 2025 AWS Public Sector Summit, "We have to out-innovate the competition … We've got to let the private sector cook<sup><a id="fnref12" href="#fn12">12</a></sup>". To that end, the second Trump Administration rescinded President Biden's AI Diffusion Rule on May 13, several days before it would go into effect.</p>
+      <p>On July 10, 2025 the Trump Administration published <em>America's AI Action Plan</em>, a White House document that laid out a new strategy for achieving global dominance in artificial intelligence. The document identifies three pillars for American AI success: acceleration of domestic AI innovation, investment in American AI infrastructure, and the promotion of American AI internationally.</p>
+      <p>The Third Pillar states that the government will focus on building "an enduring global alliance" based on "driv[ing] adoption of American AI systems, computing hardware, and standards throughout the world<sup><a id="fnref13" href="#fn13">13</a></sup>" which will in turn "stop our strategic rivals from making our allies dependent on foreign adversary technology<sup><a id="fnref14" href="#fn14">14</a></sup>." The Third Pillar emphasizes the need to meet the global demand for AI with American-made technology. By making U.S.-origin artificial intelligence models and advanced computing hardware readily available to the rest of the world, the United States will entrench itself in technology stacks across the globe. This logic recognizes the current superiority of American technology and sees the path to American dominance through the rapid adoption of American tools abroad. If demand is not met by America, the logic goes, China will fill the void.</p>
+      <p>The first policy recommendation in the Third Pillar outlined the development of an American AI Exports Program (AAEP). Two weeks later, on July 23, 2025, the White House published an Executive Order titled <em>The Export Of The American AI Technology Stack</em>. The AAEP, while yet to be finalized, proposes the creation of a program under the Department of Commerce that will aid in the diffusion of "full-stack" American AI capabilities including hardware, models, data pipelines, the security of the systems, and any top-level software that provides access to the systems<sup><a id="fnref15" href="#fn15">15</a></sup>. In short, whatever form it may take, it is another tool for the administration to drive proliferation.</p>
+      <p>In the Third Pillar policy recommendations that follow, the administration expands upon its plans for the strategic denial of resources critical to the development of artificial intelligence. These policies focus on direct export controls on microchips, semiconductors and electronic design automation software (EDA) to rival countries. These policies represent a continuation of the Biden Administration's Small Yard, High Fence strategy which focuses on chokepoints in China's computing supply chain.</p>
+
+      <h4>Interpreting the AI Action Plan</h4>
+      <p>Continuing his speech at the AWS Public Sector Summit, the White House Special Advisor for AI and Crypto, David Sacks stated, "We rescinded that Biden diffusion rule, which...made diffusion a bad word. Diffusion of our technology should be a good word<sup><a id="fnref16" href="#fn16">16</a></sup>." This is the animating spirit for the Trump Administration's approach to managing the proliferation of American AI internationally. Private industry will lead the way, regulations will be narrow, with targeted measures directed towards China, and market dominance will be the goal. Unlike the Biden Administration, the second Trump Administration's international AI policy focuses less on rules that will govern the distribution of American AI technologies and instead on what steps it can take to facilitate its proliferation.</p>
+
+      <h4>Criticism</h4>
+      <p>The Trump international AI doctrine appears to be more coherent than that of the Biden Administration. This can be attributed, however, to the administration's preference to reduce regulation and allow markets to dictate where American AI technologies are allowed to be sold. That is to say, it is easier to have regulatory consistency when there are far fewer rules. On one hand, this empowers the private sector to move quickly, sell their products abroad and proliferate American AI. However, this market-driven approach becomes more tenuous when market and national security objectives come into conflict.</p>
+      <p>Under the Trump Doctrine, there are few guidelines that dictate where American technology companies can and cannot sell their AI products. Outside of China and a small group of direct antagonists, there is a broad range of countries with varying strategic alignment with the United States. Whether America's largest tech companies can conduct business in these countries is unclear. If the government does not provide the proper level of oversight over such transactions, the risk of technology diversion to China will increase significantly. The administration must, therefore, create standard sets of assurances and enforcement mechanisms to ensure extraterritorial compliance, descriptions for which the current AI Action Plan and Export Program currently lack. This will have the dual benefit of clarifying expectations for partner countries and American companies, thus facilitating this type of transaction going forward. While a free-market philosophy may suffice for dealmaking with core allies, the government will need to evolve its international dealmaking frameworks beyond bilateral ad-hoc promises to build stronger guarantees for American technological security.</p>
+
+      <h2>Private Sector and Bilateral Dealmaking</h2>
+      <p>To effectively analyze the strengths and weaknesses of international AI proliferation under the second Trump Administration, it is instructive to look at the large-scale deals that have been completed over the last year. The last twelve months have seen a flurry of private sector deals as well as a select number of government-brokered partnerships. The details of these arrangements reflect the goals of the current Trump AI Doctrine and outline gaps in policy that should be addressed.</p>
+
+      <h3>Private Sector Diffusion</h3>
+      <p>Early indicators show that the Trump Doctrine on AI proliferation will be immensely beneficial for private sector actors, with U.S. tech giants Amazon, Google, Microsoft, NVIDIA, and OpenAI all signing billion dollar deals to build out AI capacity across the world. AWS announced a 15-year deal with the South Korean multinational conglomerate SK Group to develop an AWS AI Zone which will operate around 60,000 GPUs in Ulsan, South Korea<sup><a id="fnref17" href="#fn17">17</a></sup>. In October, Google disclosed plans to develop an AI compute center in Visakhapatnam, India with support from the Indian government to develop an "AI-first" nation<sup><a id="fnref18" href="#fn18">18</a></sup>. Microsoft announced a $10 billion dollar investment in an artificial intelligence data center in Sines, Portugal with 12,600 GPUs<sup><a id="fnref19" href="#fn19">19</a></sup>. NVIDIA announced the sale of upwards of 260,000 GPUs across South Korea to be used across South Korean multinational conglomerate and government services<sup><a id="fnref20" href="#fn20">20</a></sup>. OpenAI announced a partnership with Norwegian companies, Nscale and Aker, to develop an AI data center in Norway as part of its "OpenAI for Countries" program, a project whose goal is to spread OpenAI's AI infrastructure internationally to support "democratic AI<sup><a id="fnref21" href="#fn21">21</a></sup><sup><a id="fnref22" href="#fn22">22</a></sup>.</p>
+      <p>The scale of these private industry deals is indicative of the AI proliferation that is already underway without government intervention. In short, there is huge market demand for American AI and profit incentives clearly exist for technology companies to drive proliferation. Considering the administration's goal of meeting market demand for advanced computing capabilities, the private sector seems well-suited to provide the supply.</p>
+
+      <h3>Government Intervention in the Gulf State Deals</h3>
+      <p>Exporting AI technology to strategically ambiguous countries, however, has necessitated government intervention. When American tech companies have attempted to strike deals with Gulf States, the elevated strategic risk has prompted both the Biden and Trump Administrations to play an active role in negotiations. In 2024, Microsoft and G42, a UAE-based artificial intelligence company, announced a partnership that involved direct arbitration from the Biden Administration. In May of this year, the second Trump Administration brokered a series of deals with the United Arab Emirates (UAE) and the Kingdom of Saudi Arabia (KSA) to further build out their domestic AI capabilities. Neither the UAE nor the KSA are core U.S. allies and both countries have deep economic ties with China, so the deals involve technology leakage risk.</p>
+      <p>The Microsoft-G42 deal was announced in 2024 under the Biden Administration. The partnership involves a $1.5 billion strategic investment by Microsoft in G42, the terms of which dictate that G42 will migrate its artificial intelligence services to run on Microsoft hardware<sup><a id="fnref23" href="#fn23">23</a></sup>. Consistent with Biden policy, Peng Xiao, the Chief Executive of G42, told the Financial Times that the company would be cutting ties with their Chinese hardware suppliers as a means to move forward with the partnership with the U.S<sup><a id="fnref24" href="#fn24">24</a></sup>. Reflective of the Biden Administration's cautiousness, the United States declined to include the most advanced NVIDIA chips as part of the deal. Significantly, the deal is governed by an "Intergovernmental Assurance Agreement (IGAA)" which includes guarantees for compliance with U.S. export controls and enhanced security measures to prevent technology leakages<sup><a id="fnref25" href="#fn25">25</a></sup>. The IGAA also provides Microsoft the means to pursue litigation should G42 fail to meet the expectations of the deal. The deal reflects the values of the Biden Administration framework: a limited amount of technology proliferation, a formal government to government agreement, and terms that would allow for arbitration.</p>
+      <p>The second Trump Administration oversaw the completion of a separate deal with G42 in May 2025 for Stargate UAE, the development of an OpenAI infrastructure platform as a project under the OpenAI for Countries initiative. The first phase of the new "AI Campus" will be a 1-gigawatt datacenter to provide OpenAI-based AI capabilities for the entire UAE. Importantly, the deal was slated to include the most advanced line of NVIDIA chips, the Blackwell-architecture series chip. The deal arrived simultaneously with a new US-UAE AI Acceleration Partnership which, according to the U.S. and UAE press releases, includes commitments from the UAE to increase security measures to prevent technology leakage<sup><a id="fnref26" href="#fn26">26</a></sup><sup><a id="fnref27" href="#fn27">27</a></sup>. The deal stalled in June, however, with the two countries unable to arrive at agreement of the terms for securing the advanced computing infrastructure<sup><a id="fnref28" href="#fn28">28</a></sup>. The project did not receive official approval for the export of the NVIDIA Blackwell chips until November. The terms of the agreed security commitments have not been released.</p>
+      <p>Shortly after the UAE deal was struck in May, HUMAIN, an artificial intelligence company run under Saudi Arabia's Public Investment Fund announced deals with AWS and NVIDIA to build out an "AI Zone" that will enhance the Kingdom's artificial intelligence sovereignty. The deal also included the export of NVIDIA's most advanced line of Blackwell-class AI chips. Similar to the Stargate-UAE deal, the deal stalled over the issue of the Blackwell chips and was not approved until November, following a visit from Crown Prince Mohammed bin Salman to the White House. The approval was announced simultaneously with a new Strategic Artificial Intelligence Partnership between the U.S. and the KSA. As of current reporting, there are no formal terms of compliance other than for HUMAIN to conform to "'rigorous security and reporting requirements,' overseen by the Department of Commerce's Bureau of Industry and Security<sup><a id="fnref29" href="#fn29">29</a></sup>."</p>
+      <p>The Gulf AI partnerships could represent a strong step forward for strategic and economic alignment of United States interests in the Middle East, proving the value of AI diplomacy. The announcement of a US-UAE AI Acceleration Partnership and the KSA Strategic Artificial Intelligence Partnership are government to government agreements that could entrench U.S. influence in the region for years to come. The enduring success of these partnerships will, however, rely on the United States' ability to continuously enforce compliance and assure that its security standards are being honored. Without these guarantees, the United States risks technological diversion and the compromise of its strategic advantage over China. A broader security framework would be helpful in setting expectations for countries looking to partner with the United States in AI. Creating such a framework will not only facilitate future deals, but will also create norms around AI governance and security at the international level, further entrenching the United States' influence over AI worldwide. It is possible that the American AI Exports Program will be used to a similar end, creating a standard American AI package with common security requirements that can be ported over to new countries as needed. Whether these requirements come as part of the AAEP or a new framework from the Trump Administration, such standards will aid in the goal to promote American AI abroad.</p>
+
+      <h2>Conclusion</h2>
+      <p>The United States is caught between the strategic objective of providing the world with as much American artificial intelligence capabilities as possible while maintaining its technological advantage over China by avoiding resource diversion. Striking this balance has necessitated that the U.S. government evolve an AI proliferation strategy beyond simple chip export controls into comprehensive frameworks for managing the international proliferation of AI. While the Biden Administration's approach was largely criticized for its inflexibility and over-regulation, it presented a vision of careful advancement of U.S. interests through a risk-based diffusion of American AI resources throughout the world. If this strategy were to fail it would be because the United States did not proliferate its technology fast enough, and it lost out to Chinese manufacturing scale and speed. The Trump AI Doctrine, on the other hand, favors private sector-led market dominance and is willing to reduce regulation in service of high-speed proliferation. If this strategy fails it will likely come from unsatisfactory compliance with American national security expectations around the exported technologies. The first year of Trump's international AI strategy has seen the private sector flourish and has shown early signs of the power of AI diplomacy through the Gulf State deals. While the security guarantees of the deals have yet to be fully disclosed, early indications are that the Trump Administration is willing to accept strategic risk in service of proliferation. The administration has sanctioned the export of NVIDIA's most advanced chips to the Gulf without a comprehensive set of new mechanisms for enforcing extraterritorial compliance. The extent of security guarantees come from government to government declarations of strategic and security alignment, though more concrete measures may be announced in the future. In either case, the Gulf State deals will set a precedent for future international U.S. AI cooperation. If the second Trump Administration can use this experience to clarify its expectations for AI partnerships and set standards for international AI cooperation, it will create strong momentum towards securing global American AI dominance.</p>
+
+      <div class="footnotes">
+        <h2>Notes</h2>
+        <ol>
+          <li id="fn1">Fergusson, Ian F., Paul K. Kerr, and Christopher A. Casey, <em>The U.S. Export Control System and the Export Control Reform Act of 2018</em>, CRS Report R46814 (Washington, DC: Congressional Research Service, June 7, 2021), <a href="https://www.congress.gov/crs-product/R46814" target="_blank">congress.gov/crs-product/R46814</a><a class="backref" href="#fnref1">↩</a></li>
+          <li id="fn2">Ibid.<a class="backref" href="#fnref2">↩</a></li>
+          <li id="fn3">Ibid.<a class="backref" href="#fnref3">↩</a></li>
+          <li id="fn4">U.S. Department of Commerce, Bureau of Industry and Security, "Implementation of Additional Export Controls: Certain Advanced Computing and Semiconductor Manufacturing Items; Supercomputer and Semiconductor End Use; Entity List Modification," Federal Register 87, no. 197 (October 13, 2022): 62186, <a href="https://www.federalregister.gov/documents/2022/10/13/2022-21658/implementation-of-additional-export-controls-certain-advanced-computing-and-semiconductor" target="_blank">federalregister.gov</a><a class="backref" href="#fnref4">↩</a></li>
+          <li id="fn5">U.S. Department of Commerce, Bureau of Industry and Security, "Framework for Artificial Intelligence Diffusion," Federal Register 90, no. 9 (January 15, 2025): 4544, <a href="https://www.govinfo.gov/content/pkg/FR-2025-01-15/pdf/2025-00636.pdf" target="_blank">govinfo.gov</a><a class="backref" href="#fnref5">↩</a></li>
+          <li id="fn6">Barath Harithas, "The AI Diffusion Framework: Securing U.S. AI Leadership While Preempting Strategic Drift," CSIS, February 18, 2025, <a href="https://www.csis.org/analysis/ai-diffusion-framework-securing-us-ai-leadership-while-preempting-strategic-drift" target="_blank">csis.org</a><a class="backref" href="#fnref6">↩</a></li>
+          <li id="fn7">Jake Sullivan, "Remarks by National Security Advisor Jake Sullivan on Renewing American Economic Leadership at the Brookings Institution," The White House, April 27, 2023, <a href="https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2023/04/27/remarks-by-national-security-advisor-jake-sullivan-on-renewing-american-economic-leadership-at-the-brookings-institution" target="_blank">bidenwhitehouse.archives.gov</a><a class="backref" href="#fnref7">↩</a></li>
+          <li id="fn8">John Villasenor, "The New AI Diffusion Export Control Rule Will Undermine U.S. AI Leadership," The Brookings Institution, January 23, 2025, <a href="https://www.brookings.edu/articles/the-new-ai-diffusion-export-control-rule-will-undermine-us-ai-leadership" target="_blank">brookings.edu</a><a class="backref" href="#fnref8">↩</a></li>
+          <li id="fn9">Semiconductor Industry Association, "SIA Statement on Biden Administration Action Imposing New Export Controls on AI Chips," Semiconductors Industry Association, October 17, 2023, <a href="https://www.semiconductors.org/sia-statement-on-biden-administration-action-imposing-new-export-controls-on-ai-chips" target="_blank">semiconductors.org</a><a class="backref" href="#fnref9">↩</a></li>
+          <li id="fn10">NVIDIA, "AI Policy," NVIDIA Blog, accessed December 11, 2025, <a href="https://blogs.nvidia.com/blog/ai-policy/" target="_blank">blogs.nvidia.com/blog/ai-policy</a><a class="backref" href="#fnref10">↩</a></li>
+          <li id="fn11">European Commission, "Joint Statement by Executive Vice‑President Henna Virkkunen and Commissioner Maroš Šefčovič on U.S. Export Controls for Advanced AI Chips," European Commission Press Corner, January 13, 2025, <a href="https://ec.europa.eu/commission/presscorner/api/files/document/print/en/statement_25_255/STATEMENT_25_255_EN.pdf" target="_blank">ec.europa.eu</a><a class="backref" href="#fnref11">↩</a></li>
+          <li id="fn12">David Sacks, "White House AI Czar David Sacks on Regulations, China," FedScoop, June 10, 2025, <a href="https://fedscoop.com/white-house-ai-czar-david-sacks-regulations-china" target="_blank">fedscoop.com</a><a class="backref" href="#fnref12">↩</a></li>
+          <li id="fn13">The White House, <em>America's AI Action Plan</em> (Washington, DC: Executive Office of the President, July 2025), 20, <a href="https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf" target="_blank">whitehouse.gov</a><a class="backref" href="#fnref13">↩</a></li>
+          <li id="fn14">Ibid.<a class="backref" href="#fnref14">↩</a></li>
+          <li id="fn15">United States, Executive Order 2025‑123, "Promoting the Export of the American AI Technology Stack," Presidential Actions, July 23, 2025, <a href="https://www.whitehouse.gov/presidential-actions/2025/07/promoting-the-export-of-the-american-ai-technology-stack" target="_blank">whitehouse.gov</a><a class="backref" href="#fnref15">↩</a></li>
+          <li id="fn16">Alexandra Alper, "China Is Only 3–6 Months Behind U.S. AI, Trump Official Says," Reuters, June 10, 2025, <a href="https://www.reuters.com/world/china/china-is-only-3-6-months-behind-us-ai-trump-official-says-2025-06-10" target="_blank">reuters.com</a><a class="backref" href="#fnref16">↩</a></li>
+          <li id="fn17">Pablo Chavez, "Focusing the American AI Exports Program: Shaping It into a Scalpel Instead of a Sledgehammer," Consensus Drift (Substack), December 4, 2025, <a href="https://consensusdrift.substack.com/p/focusing-the-american-ai-exports" target="_blank">consensusdrift.substack.com</a><a class="backref" href="#fnref17">↩</a></li>
+          <li id="fn18">Google, "Our First AI Hub in India, Powered by a $1.5 Billion Investment," Google Blog, December 12, 2025, <a href="https://blog.google/intl/en-in/company-news/our-first-ai-hub-in-india-powered-by-a-15-billion-investment" target="_blank">blog.google</a><a class="backref" href="#fnref18">↩</a></li>
+          <li id="fn19">Nauman Khan, "MSFT: Microsoft Unveils $23 Billion AI Investment," Yahoo Finance, December 12, 2025, <a href="https://finance.yahoo.com/news/msft-microsoft-unveils-23-billion-171540208.html" target="_blank">finance.yahoo.com</a><a class="backref" href="#fnref19">↩</a></li>
+          <li id="fn20">Pablo Chavez, "Focusing the American AI Exports Program: Shaping It into a Scalpel Instead of a Sledgehammer," Consensus Drift (Substack), December 4, 2025, <a href="https://consensusdrift.substack.com/p/focusing-the-american-ai-exports" target="_blank">consensusdrift.substack.com</a><a class="backref" href="#fnref20">↩</a></li>
+          <li id="fn21">Ibid.<a class="backref" href="#fnref21">↩</a></li>
+          <li id="fn22">OpenAI, "OpenAI for Countries," OpenAI, accessed December 13, 2025, <a href="https://openai.com/global-affairs/openai-for-countries" target="_blank">openai.com/global-affairs/openai-for-countries</a><a class="backref" href="#fnref22">↩</a></li>
+          <li id="fn23">Microsoft, "Microsoft Invests $1.5 Billion in Abu Dhabi's G42 to Accelerate AI Development and Global Expansion," Microsoft Source Blog, April 16, 2024, <a href="https://news.microsoft.com/source/2024/04/16/microsoft-invests-1-5-billion-in-abu-dhabis-g42-to-accelerate-ai-development-and-global-expansion" target="_blank">news.microsoft.com</a><a class="backref" href="#fnref23">↩</a></li>
+          <li id="fn24">Chloe Cornish, Kaye Wiggins, "Abu Dhabi AI Group Sells Its China Stakes to Appease US," Financial Times, February 9, 2024, <a href="https://www.ft.com/content/82473ec4-fa7a-43f2-897c-ceb9b10ffd7a" target="_blank">ft.com</a><a class="backref" href="#fnref24">↩</a></li>
+          <li id="fn25">Pablo Chavez, Center for Security and Emerging Technology, <em>U.S. AI Statecraft</em> (Washington, DC: Georgetown University, July 2025), 5, <a href="https://cset.georgetown.edu/publication/u-s-ai-statecraft" target="_blank">cset.georgetown.edu</a><a class="backref" href="#fnref25">↩</a></li>
+          <li id="fn26">Embassy of the United Arab Emirates, "UAE-U.S. Framework for Advanced Technology Cooperation," UAE Embassy in Washington, D.C., May 16, 2025, <a href="https://www.uae-embassy.org/news/uaeus-framework-advanced-technology-cooperation" target="_blank">uae-embassy.org</a><a class="backref" href="#fnref26">↩</a></li>
+          <li id="fn27">The White House, "Fact Sheet: President Donald J. Trump Secures $200 Billion in New U.S.-UAE Deals and Accelerates Previously Committed $1.4 Trillion UAE Investment," The White House, May 2025, <a href="https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-secures-200-billion-in-new-u-s-uae-deals-and-accelerates-previously-committed-1-4-trillion-uae-investment" target="_blank">whitehouse.gov</a><a class="backref" href="#fnref27">↩</a></li>
+          <li id="fn28">Al Mayadeen English, "Security Fears Stall Massive UAE Data Hub Deal with US Tech Giants," Al Mayadeen English, June 7, 2025, <a href="https://english.almayadeen.net/news/technology/security-fears-stall-massive-uae-data-hub-deal-with-us-techg" target="_blank">english.almayadeen.net</a><a class="backref" href="#fnref28">↩</a></li>
+          <li id="fn29">Emma Graham, "U.S. Approves AI Chip Exports to Gulf after Saudi Crown Prince Visit," CNBC, November 20, 2025, <a href="https://www.cnbc.com/2025/11/20/us-approves-ai-chip-exports-to-gulf-after-saudi-crown-prince-visit.html" target="_blank">cnbc.com</a><a class="backref" href="#fnref29">↩</a></li>
+        </ol>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Airen Surzyn</p>
+  </footer>
+
+</body>
+</html>
